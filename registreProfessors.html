@@ -13,7 +13,21 @@ and open the template in the editor.
     <body>
         <h1>Registre de Professors</h1>
         <div>
-            
+            <form action='registreProfessors.php' method="post">
+                Nom: <input type='text' name='nom'>
+                <br><br>
+                Cognoms: <input type='text' name='cognoms'>
+                <br><br>
+                Usuari: <input type='text' name='usuari'>
+                <br><br>
+                Correu electronic <input type='text' name='correu'>
+                <br><br>
+                Password:<input type='text' name='pass1'>
+                <br><br>
+                Repeteix el password <input type='text' name='pass2'>
+                <br><br>
+                <input type='submit' name='submit'>
+            </form>
         </div>
     </body>
 </html>

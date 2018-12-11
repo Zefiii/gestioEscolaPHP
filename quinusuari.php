@@ -1,5 +1,5 @@
 <?php
-$usuari = &$_POST["usuari"];
+$usuari = $_POST["usuari"];
 echo "L'usuari es" . $usuari;
 
 /* 
