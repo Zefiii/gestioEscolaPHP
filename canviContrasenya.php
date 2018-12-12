@@ -4,8 +4,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
-
 <?php
     session_start();
     if(!isset($_SESSION["login_user_alumne"])){
@@ -18,10 +16,14 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <h1>Menu</h1>
-        <br><br>
+        <h1>Canvi de contrasenya</h1><br><br>
         <div>
-            <a href='canviContrasenya.php'>Canviar contrasenya</a>
+            <form method="post" action='caContrassenya.php'>
+                Contrassenya Antiga: <input type='password' name='contAntig'><br><br>
+                Nova contrassenya: <input type="password" name='contNova1'><br><br>
+                Repeteix la contrassenya: <input type="password" name='contNova2'><br>
+                <input type="submit" name='submit' value='Canvia'>
+            </form>
         </div>
     </body>
 </html>
