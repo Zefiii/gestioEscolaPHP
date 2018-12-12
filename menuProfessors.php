@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
 <?php
-    session_start();
-    if(!isset($_SESSION["login_user"])){
-        header("Location: http://localhost/AlumnesV1PHP/login.html", true, 301);
-    }
+session_start();
+if(!isset($_SESSION["username"])){
+    header("Location: http://localhost:8888/login.html", true, 301);
+}
 ?>
 <html>
     <head>
@@ -20,8 +13,8 @@ and open the template in the editor.
         <h1>Menu</h1>
         <br><br>
         <div>
-            <a href="">Veure assignatures</a>
-            <a href="crearAlumne.php">Donar d'alta alumne</a>
+            <a href="llistarAssignaturesProfe.php">Veure assignatures</a><br>
+            <a href="crearAlumne.php">Donar d'alta alumne</a><br>
             <a href="crearAssignatura.php">Donar d'alta assignatura</a>
         </div>
     </body>
