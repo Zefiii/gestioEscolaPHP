@@ -1,5 +1,4 @@
- <?php
-
+<?php
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,7 +18,6 @@ if($conn->connect_error){
     die("Problemes al connectar amb la base de dades: " . $conn->connect_error);
 }
 else{
-    echo "Hem entrat al else";
     $stmt = $conn->prepare("select * from professors where username = ?");
     $stmt->bind_param('s', $user);
     $stmt->execute();
@@ -29,7 +27,7 @@ else{
         if ($row["password"] == $pass){
             session_start();
             $_SESSION["username"] = $user;
-            header("Location: http://localhost/AlumnesV1PHP/menuProfessors.php", true, 301);
+            header("Location: http://localhost:8888/menuProfessors.php", true, 301);
             die();
         }
         else{
@@ -39,8 +37,7 @@ else{
         }
     }
     else{
-        echo"No s'ha trobat l'usuari: " . $user;
+        echo "No s'ha trobat l'usuari: " . $user;
     }
 }
-
 ?>
