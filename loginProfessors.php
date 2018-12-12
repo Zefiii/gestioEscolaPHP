@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
@@ -9,8 +9,8 @@
 $user = $_POST["user"];
 $pass = $_POST["pass"];
 
-$servername = "127.0.0.1:1234";
-$password = "1234";
+$servername = "127.0.0.1:3306";
+$password = "Jordirubi10!";
 $username = "root";
 $dbname = "projphp";
 $conn = new mysqli($servername, $username , $password, $dbname);
@@ -20,21 +20,21 @@ if($conn->connect_error){
 }
 else{
     echo "Hem entrat al else";
-    $stmt = $conn->prepare("select * from professors where usuari = ?");
+    $stmt = $conn->prepare("select * from professors where username = ?");
     $stmt->bind_param('s', $user);
     $stmt->execute();
     $result = $stmt->get_result();
     if($result->num_rows > 0){
         $row = $result->fetch_assoc();
-        if ($row["pass"] == $pass){
+        if ($row["password"] == $pass){
             session_start();
-            $_SESSION["login_user"] = $user;
+            $_SESSION["username"] = $user;
             header("Location: http://localhost/AlumnesV1PHP/menuProfessors.php", true, 301);
             die();
         }
         else{
             echo "<h2>Contrasenya Incorrecta</h2> <br><br>";
-            echo $pass . " no es igual a  " . $row["pass"];
+            echo $pass . " no es igual a  " . $row["password"];
             echo "<a href=\"loginProfessors.html\">Torna al login</a>";
         }
     }

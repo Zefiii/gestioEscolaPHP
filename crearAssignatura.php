@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-`<?php
+<?php
     session_start();
     if(!isset($_SESSION["login_user"])){
         header("Location: http://localhost/AlumnesV1PHP/login.html", true, 301);
@@ -22,7 +22,11 @@ and open the template in the editor.
         <div>
             <form action='altaAssig.php' method="post">
                 Nom de l'assignatura: <input type='text' name='nom'><br><br>
-                Professxr(s):<input type='text' name="professors">
+                Professor/a:<input type='text' name="professors"><br><br>
+                Credits:<input type='text' name='credits'><br><br>
+                Capacitat:<input type='text' name='capacitat'><br><br>
+                <input type="submit" name="submit" value="Crear Assignatura">
+
             </form>
         </div>
     </body>

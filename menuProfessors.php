@@ -20,8 +20,9 @@ and open the template in the editor.
         <h1>Menu</h1>
         <br><br>
         <div>
+            <a href="">Veure assignatures</a>
             <a href="crearAlumne.php">Donar d'alta alumne</a>
-            <a href="crarAssignatura.php">Donar d'alta assignatura</a>
+            <a href="crearAssignatura.php">Donar d'alta assignatura</a>
         </div>
     </body>
 </html>

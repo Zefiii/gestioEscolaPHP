@@ -19,9 +19,9 @@ and open the template in the editor.
         <h1>Canvi de contrasenya</h1><br><br>
         <div>
             <form method="post" action='caContrassenya.php'>
-                Contrassenya Antiga: <input type='password' name='contAntig'><br><br>
-                Nova contrassenya: <input type="password" name='contNova1'><br><br>
-                Repeteix la contrassenya: <input type="password" name='contNova2'><br>
+                Contrasenya Antiga: <input type='password' name='contAntig'><br><br>
+                Nova contrasenya: <input type="password" name='contNova1'><br><br>
+                Repeteix la contrasenya: <input type="password" name='contNova2'><br>
                 <input type="submit" name='submit' value='Canvia'>
             </form>
         </div>
