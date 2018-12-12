@@ -7,7 +7,6 @@
  */
 
 session_start();
-
 $user = $_SESSION["login_user_alumne"];
 $pasAntig = $_POST["contAntig"];
 $nouPas1 = $_POST["contNova1"];
@@ -21,14 +20,15 @@ if($nouPas1 == $nouPas2){
     $conn = new mysqli($servername, $username , $password, $dbname);
     if($conn->connect_error){
         echo "hem entrat al if";
-        die("Problemes al connectar amb la base de dades: " . $conn->connect_error);
+        echo("Problemes al connectar amb la base de dades: " . $conn->connect_error);
     }
     else{
-        if(mysql_query("update alumnes set pass = '$nouPas1' where usari = '$user'")){
-            echo "<h1>Canvi de contrassenya fet<h1><br><br>";
+        $sql = "update alumnes set pass = \"".$nouPas1."\" where usuari = \"". $user."\"";
+        if(mysqli_query($conn, $sql)){
+            echo "<h1>Canvi de contrassenya fet</h1><br><br>";
             echo "<a href=\"menuAlumnes.php\">Torna al menu</a>";
-
-        }        
+        }
+        else echo "<br><br> Error: " . mysqli_error($conn);
     }
 }
 else{
