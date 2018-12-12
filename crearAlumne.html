@@ -6,14 +6,15 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Registre</title>
+        <title>Crear alumne</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Registre de Professors</h1>
+        <h1>Alta d'alumne</h1>
         <div>
-            <form action='registreProfessors.php' method="post">
+            <!-- Ho fem amb get perque aixi podem fer un script per altes massives d'usauris -->
+            <form action='registreAlumnes.php' method="get">
                 Nom: <input type='text' name='nom'>
                 <br><br>
                 Cognoms: <input type='text' name='cognoms'>
