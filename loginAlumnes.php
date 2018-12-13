@@ -9,8 +9,8 @@
 $user = $_POST["user"];
 $pass = $_POST["pass"];
 
-$servername = "127.0.0.1:3306";
-$password = "Jordirubi10!";
+$servername = "127.0.0.1:1234";
+$password = "1234";
 $username = "root";
 $dbname = "projphp";
 $conn = new mysqli($servername, $username , $password, $dbname);
@@ -20,16 +20,16 @@ if($conn->connect_error){
 }
 else{
     echo "Hem entrat al else";
-    $stmt = $conn->prepare("select * from alumnes where username = ?");
+    $stmt = $conn->prepare("select * from alumnes where usuari = ?");
     $stmt->bind_param('s', $user);
     $stmt->execute();
     $result = $stmt->get_result();
     if($result->num_rows > 0){
         $row = $result->fetch_assoc();
-        if ($row["Password"] == $pass){
+        if ($row["pass"] == $pass){
             session_start();
             $_SESSION["login_user_alumne"] = $user;
-            header("Location: http://localhost/AlumnesV1PHP/menuAlumnes.php", true, 301);
+            header("Location: http://localhost:8888/menuAlumnes.php", true, 301);
             die();
         }
         else{

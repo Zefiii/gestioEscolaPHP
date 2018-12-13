@@ -21,6 +21,7 @@ and open the template in the editor.
         <h1>Menu</h1>
         <br><br>
         <div>
+            <a href='llistarAssignatures.php'>Llistar assignatures</a>
             <a href='canviContrasenya.php'>Canviar contrasenya</a>
         </div>
     </body>

@@ -14,8 +14,8 @@ $contra = $_GET["pass2"];
 
 
 if($pass == $contra){
-    $servername = "127.0.0.1:3306";
-    $password = "Jordirubi10!";
+    $servername = "127.0.0.1:1234";
+    $password = "1234";
     $username = "root";
     $dbname = "projphp";
     $conn = new mysqli($servername, $username , $password, $dbname);
@@ -23,8 +23,8 @@ if($pass == $contra){
         die("Connection error " . $conn->connect_error);
     }
     else{
-       $sql = "INSERT INTO alumnes(username, Password, Nom, Cognoms, Email)"
-               . "VALUES ('" . $user . "','" . $pass . "','" . $nom . "','" . $cognoms . "','" . $correu . "')";
+       $sql = "INSERT INTO alumnes(nom, cognoms, usuari, pass, correu)"
+               . "VALUES ('" . $nom . "','" . $cognoms . "','" . $user . "','" . $pass . "','" . $correu . "')";
        if(mysqli_query($conn, $sql)){
            echo "<h1>Alumne registrat amb exit</h1><br><br><a href=\"menuProfessors.php\">Torna al menu</a><br><br>";
            echo "<a href=\"crearAlumne.html\">Registrar un altre alumne</a>";
