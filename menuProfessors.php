@@ -15,7 +15,8 @@ if(!isset($_SESSION["username"])){
         <div>
             <a href="llistarAssignaturesProfe.php">Veure assignatures</a><br>
             <a href="crearAlumne.php">Donar d'alta alumne</a><br>
-            <a href="crearAssignatura.php">Donar d'alta assignatura</a>
+            <a href="crearAssignatura.php">Donar d'alta assignatura</a><br>
+            <a href="buscarEstudiant.php">Buscar estudiant</a>
         </div>
     </body>
 </html>

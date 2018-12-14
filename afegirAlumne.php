@@ -14,7 +14,7 @@ if(!isset($_SESSION["username"])){
 
 
 $assig = $_POST["assig"];
-$user = $_POST["user"];
+$user = $_POST["alumnes"];
 $servername = "127.0.0.1:1234";
 $password = "1234";
 $username = "root";
@@ -30,7 +30,7 @@ else{
         header("Location: http://localhost:8888/detallsAssignatura.php?nomAssig=" . $assig , true, 301);
     }
     else{
-        echo "S'ha produit un error " . mysqli_error($conn);  
+        echo "S'ha produit un error " . mysqli_error($conn) . " " . $user . " " . $assig; 
     }
 }
 
