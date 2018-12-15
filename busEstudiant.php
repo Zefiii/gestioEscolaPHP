@@ -121,7 +121,7 @@
                 }
             }
             echo "<br>";
-            echo "<a href=\"menuProfessors\">Tornar al menu</a>"
+            echo "<a href=\"menuProfessors.php\">Tornar al menu</a>"
        ?>
     </body>
 </html>
