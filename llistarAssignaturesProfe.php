@@ -9,7 +9,7 @@ if(!isset($_SESSION["username"])){
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body
+    <body>
         <h1>Assignatures</h1>
         <?php
             $servername = "127.0.0.1:3306";

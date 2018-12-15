@@ -11,8 +11,10 @@ if(!isset($_SESSION["login_user_alumne"])){
         <title></title>
     </head>
     <body>
-        <h1>Assignatures</h1>
+        <h1>Notes</h1>
+       
         <?php
+            $user = $_SESSION["login_user_alumne"];
             $servername = "127.0.0.1:3306";
             $password = "Jordirubi10!";
             $username = "root";
@@ -23,21 +25,20 @@ if(!isset($_SESSION["login_user_alumne"])){
                 die("Problemes al connectar amb la base de dades: " . $conn->connect_error);
             }
             else{
-                $stmt = $conn->prepare("select * from assignatures");
-               
+                $stmt = $conn->prepare("select * from projphp.alumnesAssig where NomAlumne = ?");
+                $stmt->bind_param('s', $user);
                 $stmt->execute();
                 $result = $stmt->get_result();
                 if($result->num_rows > 0){
                     $row = $result->fetch_assoc();
                     while($row != null){
+                        $assig = $row["Nom"];
                         echo "<br><br>";
                         echo "<div>";
-                        echo "<h3>" . $row["Nom"] . "</h3>";
-                        echo "<p>Nombre de credits: " . $row["Credits"] . "</p>";
-                        echo "<p>Capacitat d'alumnes: " . $row["Capacitat"] . "</p>"
-                                . "<p>Professor: ".$row["Professor"]. "</div>   ";
+                        echo "<h3>" . $row["NomAssignatura"] . "</h3>";
+                        echo "<p>Nota: " . $row["nota"] . "</p>";
                         $row = $result->fetch_assoc();
-                    }
+                        }
                 }
                 else{
                     echo "<h1>No hi ha cap assignatra registrada</h1> <br><br>";

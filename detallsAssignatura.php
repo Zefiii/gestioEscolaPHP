@@ -86,6 +86,8 @@ if(!isset($_SESSION["username"])){
                     }
                 }
             }
+            echo "<a href=\"llistarAssignaturesProfe.php\">Tornar al enrrere</a>";
+
         ?>
     </body>
 </html> 

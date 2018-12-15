@@ -5,7 +5,6 @@ if(!isset($_SESSION["username"])){
 }
 $assig = $_POST["assig"];
 $nota = (int)$_POST["mark"];
-echo "<h1>" . $nota ."</h1>";
 $servername = "127.0.0.1:3306";
 $password = "Jordirubi10!";
 $username = "root";

@@ -13,7 +13,7 @@
         <h1>Menu</h1>
         <br><br>
         <div>
-            <a href='llistarAssignatures.php'>Llistar assignatures</a>
+            <a href='llistarAssignatures.php'>Notes assignatures</a><br>
             <a href='canviContrasenya.php'>Canviar contrasenya</a>
         </div>
     </body>
