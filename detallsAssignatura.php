@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+session_start();
+if(!isset($_SESSION["username"])){
+    header("Location: http://localhost:8888/login.html", true, 301);
+}
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -13,8 +13,8 @@ and open the template in the editor.
         <?php
             $assig = $_GET["nomAssig"];
             echo "<h1>" . $assig . "</h1><br><br>";
-            $servername = "127.0.0.1:1234";
-            $password = "1234";
+            $servername = "127.0.0.1:3306";
+            $password = "Jordirubi10!";
             $username = "root";
             $dbname = "projphp";
             $conn = new mysqli($servername, $username , $password, $dbname);
@@ -49,9 +49,6 @@ and open the template in the editor.
                         echo "</select> </form>";
                     }
                 }
-                echo "</select>";
-                echo "<input type=\"hidden\" name=\"assig\" value=\"". $assig . "\">";
-                echo"<br><br><input type=\"submit\" value=\"Afegir alumnes\">";
                 echo "</form>";
                 echo "<form action=\"eliNotAlumne.php\" method=\"post\" class=\"inline\">";
                 echo "Alumnes matriculats: <br/> <select name=\"alumnes\" multiple=\"multiple\">";

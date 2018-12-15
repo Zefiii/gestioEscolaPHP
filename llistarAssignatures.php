@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
 <?php
 session_start();
 if(!isset($_SESSION["login_user_alumne"])){
@@ -21,8 +13,8 @@ if(!isset($_SESSION["login_user_alumne"])){
     <body>
         <h1>Assignatures</h1>
         <?php
-            $servername = "127.0.0.1:1234";
-            $password = "1234";
+            $servername = "127.0.0.1:3306";
+            $password = "Jordirubi10!";
             $username = "root";
             $dbname = "projphp";
             $conn = new mysqli($servername, $username , $password, $dbname);
@@ -50,7 +42,7 @@ if(!isset($_SESSION["login_user_alumne"])){
                 else{
                     echo "<h1>No hi ha cap assignatra registrada</h1> <br><br>";
                 }
-                echo "<a href=\"menuProfessors.php\">Tornar al menu</a>";
+                echo "<a href=\"menuAlumnes.php\">Tornar al menu</a>";
             }
         ?>
     </body>

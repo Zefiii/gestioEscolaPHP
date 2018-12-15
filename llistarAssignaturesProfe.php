@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
 <?php
 session_start();
 if(!isset($_SESSION["username"])){
@@ -20,8 +12,8 @@ if(!isset($_SESSION["username"])){
     <body
         <h1>Assignatures</h1>
         <?php
-            $servername = "127.0.0.1:1234";
-            $password = "1234";
+            $servername = "127.0.0.1:3306";
+            $password = "Jordirubi10!";
             $username = "root";
             $dbname = "projphp";
             $conn = new mysqli($servername, $username , $password, $dbname);

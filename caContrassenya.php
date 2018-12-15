@@ -1,11 +1,4 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 session_start();
 $user = $_SESSION["login_user_alumne"];
 $pasAntig = $_POST["contAntig"];
@@ -13,8 +6,8 @@ $nouPas1 = $_POST["contNova1"];
 $nouPas2 = $_POST["contNova2"];
 
 if($nouPas1 == $nouPas2){
-    $servername = "127.0.0.1:1234";
-    $password = "1234";
+    $servername = "127.0.0.1:3306";
+    $password = "Jordirubi10!";
     $username = "root";
     $dbname = "projphp";
     $conn = new mysqli($servername, $username , $password, $dbname);

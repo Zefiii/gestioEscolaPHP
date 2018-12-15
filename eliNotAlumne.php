@@ -1,22 +1,13 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 session_start();
 if(!isset($_SESSION["username"])){
     header("Location: http://localhost:8888/login.html", true, 301);
 }
-
-
 $assig = $_POST["assig"];
 $nota = (int)$_POST["mark"];
 echo "<h1>" . $nota ."</h1>";
-$servername = "127.0.0.1:1234";
-$password = "1234";
+$servername = "127.0.0.1:3306";
+$password = "Jordirubi10!";
 $username = "root";
 $dbname = "projphp";
 $conn = new mysqli($servername, $username , $password, $dbname);

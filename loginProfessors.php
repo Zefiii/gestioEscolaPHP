@@ -8,8 +8,8 @@
 $user = $_POST["user"];
 $pass = $_POST["pass"];
 
-$servername = "127.0.0.1:1234";
-$password = "1234";
+$servername = "127.0.0.1:3306";
+$password = "Jordirubi10!";
 $username = "root";
 $dbname = "projphp";
 $conn = new mysqli($servername, $username , $password, $dbname);
