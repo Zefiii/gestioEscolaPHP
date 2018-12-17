@@ -7,7 +7,7 @@ $nouPas2 = $_POST["contNova2"];
 
 if($nouPas1 == $nouPas2){
     $servername = "127.0.0.1:3306";
-    $password = "Jordirubi10!";
+    $password = "1234";
     $username = "root";
     $dbname = "projphp";
     $conn = new mysqli($servername, $username , $password, $dbname);

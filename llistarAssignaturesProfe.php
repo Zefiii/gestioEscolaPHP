@@ -13,7 +13,7 @@ if(!isset($_SESSION["username"])){
         <h1>Assignatures</h1>
         <?php
             $servername = "127.0.0.1:3306";
-            $password = "Jordirubi10!";
+            $password = "1234";
             $username = "root";
             $dbname = "projphp";
             $conn = new mysqli($servername, $username , $password, $dbname);

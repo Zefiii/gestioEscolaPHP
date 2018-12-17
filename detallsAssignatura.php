@@ -14,7 +14,7 @@ if(!isset($_SESSION["username"])){
             $assig = $_GET["nomAssig"];
             echo "<h1>" . $assig . "</h1><br><br>";
             $servername = "127.0.0.1:3306";
-            $password = "Jordirubi10!";
+            $password = "1234";
             $username = "root";
             $dbname = "projphp";
             $conn = new mysqli($servername, $username , $password, $dbname);

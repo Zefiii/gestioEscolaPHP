@@ -3,7 +3,7 @@ $user = $_POST["user"];
 $pass = $_POST["pass"];
 
 $servername = "127.0.0.1:3306";
-$password = "Jordirubi10!";
+$password = "1234";
 $username = "root";
 $dbname = "projphp";
 $conn = new mysqli($servername, $username , $password, $dbname);
